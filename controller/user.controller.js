@@ -188,7 +188,7 @@ exports.profilePhotoUpload= async (request,response)=>{
       let deleteuserPhoto = await userDetails.findOne({userId:user_Id.id});
        fs.unlink(__dirname + './../public/image/'+deleteuserPhoto.avatar,function(err){
         console.log(`file delete problem is:${err}`)
-        if(err) return console.log(err)
+        // if(err) return console.log(err)
         console.log("file deleted successfuly")
        })
       let savePhoto = await userDetails.findOneAndUpdate({userId:user_Id.id},{
