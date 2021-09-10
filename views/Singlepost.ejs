@@ -1,0 +1,29 @@
+<%- include('include/_header') %>
+<div class="w-full md:w-4/5 bg-gray-200 mx-auto mt-5 ">
+ <div class="w-full text-center p-4 text-2xl font-serif font-semibold">Single Post</div>
+ <div class="w-full flex mt-1">
+    <div class="w-1/5 p-2 bg-gray-300 font-serif font-medium text-xl text-center">Post details</div>
+    <div class="w-4/5 p-2 font-serif text-lg"><%= singlepost.postBody %></div>
+ </div>
+
+ <div class="w-full flex mt-1">
+    <div class="w-1/5 p-2 bg-gray-300 font-serif font-medium text-xl text-center">Class</div>
+    <div class="w-4/5 p-2 font-serif text-lg"><%= singlepost.Studentclass %></div>
+ </div>
+
+ <div class="w-full flex mt-1">
+    <div class="w-1/5 p-2 bg-gray-300 font-serif font-medium text-xl text-center ">Address</div>
+    <div class="w-4/5 p-2 font-serif text-lg"><%= singlepost.address %></div>
+ </div>
+
+ <div class="w-full flex mt-1">
+    <div class="w-1/5 p-2 bg-gray-300 font-serif font-medium text-xl text-center">salary</div>
+    <div class="w-4/5 p-2  text-lg"><%= singlepost.salary %></div>
+ </div>
+ 
+ <div class="w-full text-right bg-gray-300 text-xl font-serif font-medium p-3 mt-1">
+    <a href="/api/admin/home"> Go back </a> 
+</div>
+</div>
+
+<%- include('_Footer')%>

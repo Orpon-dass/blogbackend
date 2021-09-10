@@ -1,0 +1,20 @@
+<%- include('include/_header') %>
+    <div class="bg-gray-300 w-full h-screen">
+        <div  class="w-4/5 mx-auto pt-10">
+            <div class="bg-indigo-300 w-4/5 mx-auto p-4 ">
+                <div class="text-2xl text-gray-800 font-serif m-4">Admin login </div>
+                <form action="/api/admin/login" method="POST">
+                    <div class="m-4">
+                        <input  name="email" class="w-full h-12 rounded-md focus:ring-indigo-700 focus:ring-2 focus:outline-none text-lg pl-3 text-gray-700 font-serif" placeholder="sample@gmail.com" />
+                    </div>   
+                    <div class="m-4">
+                        <input type="password" name="password" class="w-full h-12 rounded-md focus:ring-indigo-700 focus:ring-2 focus:outline-none text-lg pl-3 text-gray-700 font-serif" placeholder="password" />
+                    </div>    
+                    <div class="m-4">
+                       <button type="submit" class="h-12 w-full bg-indigo-500 text-white font-serif font-semibold rounded-md text-xl focus:bg-indigo-700 hover:bg-indigo-700 text-center transition-colors duration-700 ease-in-out">Login</button>
+                   </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('_Footer')%>
