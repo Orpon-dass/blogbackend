@@ -182,11 +182,11 @@ exports.profilePhotoUpload= async (request,response)=>{
      }
      let originalFile =request.files.photo;
      profilePicName =new Date().getTime() + '-'+ originalFile.name;
-     uploadPath = __dirname + './../public/image/'+profilePicName;
+     uploadPath = __dirname + profilePicName;
      originalFile.mv(uploadPath);
      if(originalFile){
       let deleteuserPhoto = await userDetails.findOne({userId:user_Id.id});
-       fs.unlink(__dirname + './../public/image/'+deleteuserPhoto.avatar,function(err){
+       fs.unlink(__dirname + deleteuserPhoto.avatar,function(err){
         console.log(`file delete problem is:${err}`)
         // if(err) return console.log(err)
         console.log("file deleted successfuly")
