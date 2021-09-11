@@ -186,7 +186,7 @@ exports.profilePhotoUpload= async (request,response)=>{
 
      originalFile.mv(uploadPath,function(err){
         if(err){
-          console.log(err)
+          return response.json({message:"photo not moved"})
         }
      });
      if(originalFile){
@@ -196,7 +196,7 @@ exports.profilePhotoUpload= async (request,response)=>{
          fs.unlink(__dirname +"./../public/image/"+ deleteuserPhoto.avatar,function(err){
           console.log(`file delete problem is:${err}`)
           if(err){
-            console.log(err)
+            return response.json({message:"photo not deleted"})
           } 
          });
        }
