@@ -6,6 +6,8 @@ const bodyparser =require('body-parser');
 const fileUpload = require('express-fileupload');
 var cookieParser = require('cookie-parser')
 const path = require("path");
+//cors using for multiple client site request
+var cors = require('cors');
 
 const app = express();
 //set view engine
@@ -18,6 +20,7 @@ const httpServer = require("http").createServer(app)
 const io = require("socket.io")(httpServer,{
     cors:{
         origin:"*",  
+        methods: ["GET", "POST"]
     }
 });
 
@@ -80,10 +83,10 @@ app.use(fileUpload());
 //make public folder for client
 app.use(express.static("public"));
 
-//cors using for multiple client site request
-var cors = require('cors');
+
 app.use(cors({
     origin:"*",
+    methods: ["GET", "POST"]
 }));
 
 //connection of mongo db 
