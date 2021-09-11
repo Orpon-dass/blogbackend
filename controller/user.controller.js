@@ -182,7 +182,7 @@ exports.profilePhotoUpload= async (request,response)=>{
      }
      let originalFile =request.files.photo;
      profilePicName =new Date().getTime() + '-'+ originalFile.name;
-     uploadPath = __dirname +"../public/image/"+ profilePicName;
+     uploadPath ="public/image/"+ profilePicName;
 
      originalFile.mv(uploadPath,function(err){
         if(err){
