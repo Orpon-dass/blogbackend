@@ -191,8 +191,7 @@ exports.profilePhotoUpload= async (request,response)=>{
      });
      if(originalFile){
       let deleteuserPhoto = await userDetails.findOne({userId:user_Id.id});
-      console.log(deleteuserPhoto.avatar!=="")
-       if(deleteuserPhoto.avatar){
+       if(deleteuserPhoto.avatar!==""){
          //online photo link
          fs.unlink("public/image/"+ deleteuserPhoto.avatar,function(err){
           if(err){
