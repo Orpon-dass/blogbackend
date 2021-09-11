@@ -186,7 +186,7 @@ exports.profilePhotoUpload= async (request,response)=>{
 
      originalFile.mv(uploadPath,function(err){
         if(err){
-          return response.json({message:"photo not moved"})
+          return response.json({message:uploadPath})
         }
      });
      if(originalFile){
