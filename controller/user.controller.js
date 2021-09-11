@@ -193,8 +193,7 @@ exports.profilePhotoUpload= async (request,response)=>{
       let deleteuserPhoto = await userDetails.findOne({userId:user_Id.id});
       console.log(deleteuserPhoto.avatar!=="")
        if(deleteuserPhoto.avatar){
-         fs.unlink(__dirname +"./../public/image/"+ deleteuserPhoto.avatar,function(err){
-          console.log(`file delete problem is:${err}`)
+         fs.unlink("public/image/"+ deleteuserPhoto.avatar,function(err){
           if(err){
             return response.json({message:"photo not deleted"})
           } 
