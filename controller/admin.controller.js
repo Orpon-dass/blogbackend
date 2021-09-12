@@ -90,7 +90,7 @@ exports.singleUserFind= async (request,response)=>{
   try{
     const id =  request.params.userid;
     const single_User = await userDetails.findOne({userId:id});
-    response.render("Singleuser",{user:single_User});
+    response.render("User",{user:single_User});
     //response.json({single_User})
   }catch(err){
     console.log(`problem is : ${err}`)
