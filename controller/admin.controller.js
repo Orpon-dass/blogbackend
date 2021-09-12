@@ -92,7 +92,7 @@ exports.singleUser= async (request, response)=>{
     const single_User = await userDetails.findOne({userId:id});
     response.render("Singleuser",{user:single_User})
   }catch(err){
-    console.log(err);
+    response.json(err);
   }
 }
 //delete post 
