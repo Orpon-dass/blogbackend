@@ -195,7 +195,7 @@ exports.profilePhotoUpload= async (request,response)=>{
          //online photo link
          fs.unlink("public/image/"+ deleteuserPhoto.avatar,function(err){
           if(err){
-            return response.json({message:"photo not deleted"})
+            return response.json({message:"Previous photo not deleted"})
           } 
          });
        }
