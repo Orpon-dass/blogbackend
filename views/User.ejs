@@ -1,7 +1,10 @@
 <%- include('include/_header') %>
 <div class="w-full md:w-4/5 bg-gray-200 mx-auto mt-5">
-    <h1>Ok</h1>
-
+    <div class="flex justify-items-center justify-center">
+        <div>
+            <img class="p-2 object-cover object-center w-44 h-44 rounded-full" src="https://orpon-blog-app.herokuapp.com/image/<%= user.avatar %>"/>
+        </div>
+   </div>
     <div class="w-full flex mt-1">
         <div class="w-1/5 p-2 bg-gray-300 font-serif font-medium text-xl text-center">Name</div>
         <div class="w-4/5 p-2 font-serif text-lg bg-gray-100"><%= user.username %></div>
