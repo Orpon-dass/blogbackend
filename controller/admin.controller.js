@@ -86,7 +86,7 @@ exports.singlePost= async (request,response)=>{
   }
 }
 //single user 
-exports.singleUser= async (request, response)=>{
+exports.singleUserFind= async (request, response)=>{
   try{
     const id =  request.params.id;
     const single_User = await userDetails.findOne({userId:id});
