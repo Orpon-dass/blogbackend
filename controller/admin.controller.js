@@ -92,6 +92,7 @@ exports.singleUserFind= async (request,response)=>{
     const single_User = await userDetails.findOne({userId:id});
     response.render("Singleuser",{user:single_User})
   }catch(err){
+    console.log(`problem is : ${err}`)
     response.status(500).json({err});
   }
 }
