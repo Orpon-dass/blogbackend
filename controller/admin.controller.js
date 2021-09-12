@@ -86,13 +86,13 @@ exports.singlePost= async (request,response)=>{
   }
 }
 //single user 
-exports.singleUserFind= async (request, response)=>{
+exports.singleUserFind= async (request,response)=>{
   try{
-    const id =  request.params.id;
+    const id =  request.params.userid;
     const single_User = await userDetails.findOne({userId:id});
     response.render("Singleuser",{user:single_User})
   }catch(err){
-    response.json(err.message);
+    response.status(500).json({err});
   }
 }
 //delete post 
