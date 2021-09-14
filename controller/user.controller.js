@@ -250,3 +250,5 @@ exports.valid = (req,res)=>{
  res.send(token);
   
 }
+
+//upload some picture
